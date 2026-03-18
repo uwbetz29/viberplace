@@ -17,6 +17,12 @@ export async function Navbar() {
           >
             Browse Apps
           </Link>
+          <Link
+            href="/get-started"
+            className="text-sm text-foreground/60 hover:text-foreground transition-colors"
+          >
+            Get Started
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">

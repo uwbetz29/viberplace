@@ -14,7 +14,7 @@ export default function Home() {
           Built something cool with Claude Code? Ship it to Viberplace. Browse,
           share, and discover apps made by vibe coders like you.
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 justify-center flex-wrap">
           <Link
             href="/apps"
             className="bg-accent hover:bg-accent/80 text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors"
@@ -26,6 +26,12 @@ export default function Home() {
             className="border border-border hover:border-foreground/30 text-foreground px-6 py-3 rounded-lg text-lg font-medium transition-colors"
           >
             Submit Yours
+          </Link>
+          <Link
+            href="/get-started"
+            className="text-foreground/60 hover:text-foreground px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+          >
+            How it works →
           </Link>
         </div>
       </section>
