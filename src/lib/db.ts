@@ -10,11 +10,14 @@ export async function initDb() {
   await sql`
     CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
-      github_id INTEGER UNIQUE NOT NULL,
+      github_id INTEGER UNIQUE,
+      google_id VARCHAR(255) UNIQUE,
       username VARCHAR(255) UNIQUE NOT NULL,
       name VARCHAR(255),
+      email VARCHAR(255),
       avatar_url TEXT,
       bio TEXT,
+      provider VARCHAR(50) DEFAULT 'github',
       created_at TIMESTAMP DEFAULT NOW()
     )
   `;
