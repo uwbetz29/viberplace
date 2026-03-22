@@ -62,6 +62,7 @@ export default async function ProfilePage({
               name={app.name as string}
               slug={app.slug as string}
               tagline={app.tagline as string}
+              url={app.url as string}
               image_url={app.image_url as string | null}
               tags={app.tags as string[]}
               username={app.username as string}

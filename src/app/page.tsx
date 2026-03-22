@@ -10,28 +10,56 @@ export default function Home() {
           <br />
           <span className="text-accent-light">vibe-coded</span> apps
         </h1>
-        <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto mb-12">
           Built something cool with Claude Code? Ship it to Viberplace. Browse,
           share, and discover apps made by vibe coders like you.
         </p>
-        <div className="flex gap-4 justify-center flex-wrap">
+
+        {/* Three equal CTAs */}
+        <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
           <Link
             href="/apps"
-            className="bg-accent hover:bg-accent/80 text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+            className="group flex flex-col items-center gap-4 bg-surface border border-border hover:border-accent/50 rounded-2xl p-8 transition-all hover:shadow-[0_0_30px_rgba(124,58,237,0.1)]"
           >
-            Browse Apps
+            <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+              <svg className="w-7 h-7 text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold mb-1 group-hover:text-accent-light transition-colors">Browse Apps</h2>
+              <p className="text-sm text-foreground/50">Discover what others have built</p>
+            </div>
           </Link>
+
           <Link
             href="/submit"
-            className="border border-border hover:border-foreground/30 text-foreground px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+            className="group flex flex-col items-center gap-4 bg-surface border border-border hover:border-accent/50 rounded-2xl p-8 transition-all hover:shadow-[0_0_30px_rgba(124,58,237,0.1)]"
           >
-            Submit Yours
+            <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+              <svg className="w-7 h-7 text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold mb-1 group-hover:text-accent-light transition-colors">Submit App</h2>
+              <p className="text-sm text-foreground/50">List your app on the marketplace</p>
+            </div>
           </Link>
+
           <Link
             href="/get-started"
-            className="text-foreground/60 hover:text-foreground px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+            className="group flex flex-col items-center gap-4 bg-surface border border-border hover:border-accent/50 rounded-2xl p-8 transition-all hover:shadow-[0_0_30px_rgba(124,58,237,0.1)]"
           >
-            How it works →
+            <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+              <svg className="w-7 h-7 text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold mb-1 group-hover:text-accent-light transition-colors">Get Started</h2>
+              <p className="text-sm text-foreground/50">Step-by-step guide for new users</p>
+            </div>
           </Link>
         </div>
       </section>

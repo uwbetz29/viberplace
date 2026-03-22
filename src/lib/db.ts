@@ -40,5 +40,8 @@ export async function initDb() {
     )
   `;
 
+  // Migrations
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS role VARCHAR(50) DEFAULT 'member'`;
+
   return { success: true };
 }
