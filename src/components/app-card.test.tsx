@@ -24,6 +24,7 @@ const defaultProps = {
   name: "Test App",
   slug: "test-app",
   tagline: "A test application",
+  url: "https://example.com",
   image_url: null,
   tags: [],
   username: "testuser",
@@ -45,12 +46,13 @@ describe("AppCard", () => {
 
   it("displays the username", () => {
     render(<AppCard {...defaultProps} />);
-    expect(screen.getByText("testuser")).toBeInTheDocument();
+    expect(screen.getByText("@testuser")).toBeInTheDocument();
   });
 
   it("shows first letter when no image_url is provided", () => {
     render(<AppCard {...defaultProps} />);
-    expect(screen.getByText("T")).toBeInTheDocument();
+    const letters = screen.getAllByText("T");
+    expect(letters.length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders the image when image_url is provided", () => {

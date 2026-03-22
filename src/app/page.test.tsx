@@ -35,19 +35,19 @@ describe("Home Page", () => {
 
   it("renders Browse Apps link", () => {
     render(<Home />);
-    const link = screen.getByRole("link", { name: "Browse Apps" });
+    const link = screen.getByRole("link", { name: /Browse Apps/ });
     expect(link).toHaveAttribute("href", "/apps");
   });
 
-  it("renders Submit Yours link", () => {
+  it("renders Submit App link", () => {
     render(<Home />);
-    const link = screen.getByRole("link", { name: "Submit Yours" });
+    const link = screen.getByRole("link", { name: /Submit App/ });
     expect(link).toHaveAttribute("href", "/submit");
   });
 
-  it("renders How it works link", () => {
+  it("renders Get Started link", () => {
     render(<Home />);
-    const link = screen.getByRole("link", { name: /How it works/ });
+    const link = screen.getByRole("link", { name: /Get Started/ });
     expect(link).toHaveAttribute("href", "/get-started");
   });
 

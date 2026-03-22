@@ -32,8 +32,8 @@ describe("db", () => {
       mockSql.mockResolvedValue([]);
       const result = await initDb();
       expect(result).toEqual({ success: true });
-      // Should be called twice: once for users table, once for apps table
-      expect(mockSql).toHaveBeenCalledTimes(2);
+      // Called three times: users table, apps table, and role migration
+      expect(mockSql).toHaveBeenCalledTimes(3);
     });
 
     it("returns success: true on completion", async () => {
